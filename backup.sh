@@ -24,11 +24,11 @@ backup () {
     video
   )
   for dir in "${dirs_to_backup[@]}"; do
-    echo -e "\n:::Backing up "${dir}" to "${base_dir}/${dir}":::"
+    echo -e "---Backing up "${dir}" to "${base_dir}/${dir}"---"
     rsync -azv --delete "$HOME/${dir}" "${base_dir}/"
   done
 
-  echo -e "\n:::Done:::"
+  echo -e ":::Done:::\n"
 }
 
 # Common  error handling function
